@@ -1,0 +1,1529 @@
+<!doctype html>
+<html lang="ko" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로컬 소상공인 AI-휴머니즘 옴니채널 마케터 | 로컬노크 STUDIO</title>
+    <meta name="description" content="AI가 만든 획일적 홍보물의 한계를 뛰어넘어, 지역 상권의 고유한 감성과 오프라인 인쇄·디지털 매체를 유기적으로 연결하는 맞춤형 홍보·브랜딩 솔루션" />
+    <meta property="og:title" content="로컬 소상공인 AI-휴머니즘 옴니채널 마케터" />
+    <meta property="og:description" content="AI가 만든 획일적 홍보물의 한계를 뛰어넘어, 지역 상권의 고유한 감성과 오프라인 인쇄·디지털 매체를 유기적으로 연결하는 맞춤형 홍보·브랜딩 솔루션" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts & Pretendard CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- Tailwind CSS CDN for Standalone Browser Compatibility -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lime: {
+                DEFAULT: '#B5F21D',
+                light: '#C4F036',
+                dark: '#9ad010',
+              },
+            },
+            fontFamily: {
+              sans: ['Pretendard', 'Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+              mono: ['Plus Jakarta Sans', 'ui-monospace', 'monospace'],
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      body {
+        font-family: 'Pretendard', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      .clover-mask {
+        clip-path: path("M 150 0 C 190 0 210 50 240 60 C 280 70 300 110 300 150 C 300 190 280 230 240 240 C 210 250 190 300 150 300 C 110 300 90 250 60 240 C 20 230 0 190 0 150 C 0 110 20 70 60 60 C 90 50 110 0 150 0 Z");
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #999;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#F8F9FA] text-[#111827] antialiased selection:bg-[#B5F21D] selection:text-black">
+    <!-- Top Navigation Bar (Header) -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between gap-8">
+          <!-- Zone 1: Brand Wordmark with Neon Lime Asterisk -->
+          <a href="#" class="flex items-center gap-2.5 text-white group cursor-pointer whitespace-nowrap shrink-0">
+            <div class="w-8 h-8 rounded-full bg-[#B5F21D] flex items-center justify-center text-black font-black text-lg transition-transform group-hover:rotate-45 duration-300">
+              ✻
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-lg sm:text-xl tracking-tight text-white flex items-center gap-1.5">
+                LocalNook
+                <span class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-white/10 text-neutral-300">STUDIO</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Zone 2: Navigation Links -->
+          <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-200">
+            <a href="#overview" class="hover:text-[#B5F21D] transition-colors whitespace-nowrap shrink-0">소개</a>
+            <a href="#painpoints" class="hover:text-[#B5F21D] transition-colors whitespace-nowrap shrink-0">문제 진단</a>
+            <a href="#services" class="hover:text-[#B5F21D] transition-colors whitespace-nowrap shrink-0">핵심 솔루션</a>
+            <a href="#simulator" class="hover:text-[#B5F21D] transition-colors whitespace-nowrap shrink-0">인쇄 시뮬레이터</a>
+            <a href="#packages" class="hover:text-[#B5F21D] transition-colors whitespace-nowrap shrink-0">수익 모델</a>
+            <a href="#cases" class="hover:text-[#B5F21D] transition-colors whitespace-nowrap shrink-0">검증 사례 (MVP)</a>
+            <a href="#settlement" class="hover:text-[#B5F21D] transition-colors whitespace-nowrap shrink-0">지역 상생</a>
+          </nav>
+
+          <!-- Zone 3: Diagnostic Trigger & Primary Action Button -->
+          <div class="flex items-center gap-3 shrink-0">
+            <a href="#simulator" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-white/90 bg-white/10 hover:bg-white/20 rounded-full border border-white/20 backdrop-blur-sm transition-all whitespace-nowrap shrink-0">
+              <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-[#B5F21D]"></i>
+              <span>인쇄 진단기</span>
+            </a>
+
+            <button onclick="openModal('무료 방문 컨설팅 신청')" class="group inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-black bg-[#B5F21D] hover:bg-[#a3dc17] rounded-full shadow-md hover:shadow-lg transition-all duration-200 whitespace-nowrap shrink-0 cursor-pointer">
+              <span>무료 컨설팅 신청</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+            </button>
+
+            <!-- Mobile Hamburger Button -->
+            <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-neutral-300 hover:text-white rounded-lg hover:bg-white/10 transition-colors" aria-label="메뉴 열기">
+              <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-4 pt-4 pb-3 border-t border-white/10 flex flex-col gap-3 bg-neutral-900/95 backdrop-blur-xl px-4 rounded-2xl">
+          <a href="#overview" onclick="toggleMobileMenu()" class="text-neutral-200 hover:text-[#B5F21D] text-sm py-1.5 transition-colors">소개 (Overview)</a>
+          <a href="#painpoints" onclick="toggleMobileMenu()" class="text-neutral-200 hover:text-[#B5F21D] text-sm py-1.5 transition-colors">문제 진단 (Pain Points)</a>
+          <a href="#services" onclick="toggleMobileMenu()" class="text-neutral-200 hover:text-[#B5F21D] text-sm py-1.5 transition-colors">핵심 솔루션 (Services)</a>
+          <a href="#simulator" onclick="toggleMobileMenu()" class="text-neutral-200 hover:text-[#B5F21D] text-sm py-1.5 transition-colors">인쇄 시뮬레이터</a>
+          <a href="#packages" onclick="toggleMobileMenu()" class="text-neutral-200 hover:text-[#B5F21D] text-sm py-1.5 transition-colors">수익 모델 (Packages)</a>
+          <a href="#cases" onclick="toggleMobileMenu()" class="text-neutral-200 hover:text-[#B5F21D] text-sm py-1.5 transition-colors">검증 사례 (MVP 3곳)</a>
+          <a href="#settlement" onclick="toggleMobileMenu()" class="text-neutral-200 hover:text-[#B5F21D] text-sm py-1.5 transition-colors">지역 정주 로드맵</a>
+          <button onclick="toggleMobileMenu(); openModal('인쇄 파일 진단 신청');" class="text-left text-[#B5F21D] text-sm py-1.5 flex items-center gap-1.5">
+            <i data-lucide="sliders-horizontal" class="w-4 h-4"></i>
+            <span>RGB vs CMYK 색감 진단 신청</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Flow -->
+    <main class="flex-1">
+      <!-- 1. HERO SECTION (Mirroring Reference Screenshot) -->
+      <section id="overview" class="pt-24 sm:pt-28 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] flex flex-col justify-between p-6 sm:p-10 lg:p-14 shadow-2xl border border-neutral-800/40">
+          <!-- Background Image with Contrast Scrim -->
+          <div class="absolute inset-0 z-0">
+            <img src="/src/assets/images/hero_designer_consulting_1794013187177.jpg" alt="30대 4년 차 편집디자이너와 골목 소상공인의 홈 오피스 브랜딩 컨설팅" class="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.05]" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/40"></div>
+          </div>
+
+          <!-- Top Status Tag & Index Indicator -->
+          <div class="relative z-10 flex items-center justify-between">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium text-white/90">
+              <span class="w-2 h-2 rounded-full bg-[#B5F21D]"></span>
+              <span>신직업: 로컬 소상공인 AI-휴머니즘 옴니채널 마케터</span>
+            </div>
+
+            <div class="hidden md:flex flex-col items-end gap-1 text-white/60 text-xs font-mono">
+              <span class="text-[#B5F21D] font-bold">01</span>
+              <div class="w-0.5 h-12 bg-white/20 relative rounded-full overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1/2 bg-[#B5F21D] rounded-full"></div>
+              </div>
+              <span>03</span>
+            </div>
+          </div>
+
+          <!-- Main Hero Typography & CTAs -->
+          <div class="relative z-10 my-auto py-8 max-w-2xl lg:max-w-3xl">
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider text-[#B5F21D] uppercase mb-3">
+              <span>편집디자이너의 정주형 창직 프로젝트</span>
+              <span class="w-8 h-px bg-[#B5F21D]/60"></span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-5">
+              AI의 속도에 <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-neutral-300">디자이너의 온기를 더하다</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-neutral-200 font-normal leading-relaxed max-w-2xl mb-8">
+              AI가 만든 획일적 홍보물의 한계를 뛰어넘어, 지역 상권의 고유한 감성과 오프라인 인쇄·디지털 매체를 유기적으로 연결하는 맞춤형 홍보·브랜딩 솔루션을 제공합니다.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3">
+              <button onclick="openModal('무료 3곳 시범제작 (MVP) 신청')" class="inline-flex items-center justify-center px-6 py-3.5 text-sm sm:text-base font-bold text-black bg-[#B5F21D] hover:bg-[#a2dc15] rounded-full shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer">
+                무료 3곳 시범제작 신청
+              </button>
+
+              <button onclick="openModal('무료 3곳 시범제작 (MVP) 신청')" class="w-12 h-12 rounded-full bg-[#B5F21D] hover:bg-[#a2dc15] text-black flex items-center justify-center shadow-lg transition-transform hover:scale-105 cursor-pointer" aria-label="신청 바로가기">
+                <i data-lucide="arrow-up-right" class="w-6 h-6 stroke-[2.5]"></i>
+              </button>
+
+              <a href="#painpoints" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-3 text-sm font-medium text-white/80 hover:text-white transition-colors ml-2">
+                <span>왜 AI 홍보물은 인쇄하면 깨질까?</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-[#B5F21D]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bottom 3 Frosted Glass Indicator Pills (Matching Screenshot) -->
+          <div class="relative z-10 pt-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a href="#painpoints" class="group text-left px-5 py-3.5 rounded-2xl backdrop-blur-md transition-all duration-200 border bg-white/20 border-[#B5F21D] text-white shadow-lg">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[11px] font-mono font-semibold tracking-wider text-[#B5F21D]">01</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-white/60 group-hover:text-white transition-all"></i>
+                </div>
+                <div class="text-xs sm:text-sm font-bold text-white group-hover:text-[#B5F21D] transition-colors">AI 아이데이션 & 카피</div>
+                <div class="text-[11px] text-neutral-300 truncate mt-0.5">신속한 동네 감성 무드보드 도출</div>
+              </a>
+
+              <a href="#services" class="group text-left px-5 py-3.5 rounded-2xl backdrop-blur-md transition-all duration-200 border bg-white/10 hover:bg-white/15 border-white/20 text-neutral-200">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[11px] font-mono font-semibold tracking-wider text-[#B5F21D]">02</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-white/60 group-hover:text-white transition-all"></i>
+                </div>
+                <div class="text-xs sm:text-sm font-bold text-white group-hover:text-[#B5F21D] transition-colors">300DPI 정밀 인쇄 감리</div>
+                <div class="text-[11px] text-neutral-300 truncate mt-0.5">CMYK 색감 보정 & 지질 큐레이션</div>
+              </a>
+
+              <a href="#packages" class="group text-left px-5 py-3.5 rounded-2xl backdrop-blur-md transition-all duration-200 border bg-white/10 hover:bg-white/15 border-white/20 text-neutral-200">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[11px] font-mono font-semibold tracking-wider text-[#B5F21D]">03</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-white/60 group-hover:text-white transition-all"></i>
+                </div>
+                <div class="text-xs sm:text-sm font-bold text-white group-hover:text-[#B5F21D] transition-colors">온·오프라인 옴니채널</div>
+                <div class="text-[11px] text-neutral-300 truncate mt-0.5">인쇄 메뉴판 + SNS 배너 세트</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. BENTO 3-CARD ROW (Strictly Mirroring Sample Screenshot) -->
+      <section id="painpoints" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <!-- Card 1: Left Card (Off-White, Print Proofing Inspection) -->
+          <div class="bg-[#F3F4F6] rounded-[2rem] p-7 sm:p-8 flex flex-col justify-between border border-neutral-200/80 hover:border-neutral-300 transition-all duration-300 group shadow-sm hover:shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-[11px] font-bold tracking-wider text-neutral-600 uppercase px-3 py-1 bg-white rounded-full border border-neutral-200/60 shadow-xs">
+                  PAIN POINT 진단
+                </span>
+                <a href="#simulator" class="w-10 h-10 rounded-full bg-white group-hover:bg-neutral-900 group-hover:text-white text-neutral-800 flex items-center justify-center transition-all duration-200 shadow-xs cursor-pointer" title="색감 진단 열기">
+                  <i data-lucide="arrow-up-right" class="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                </a>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 tracking-tight leading-snug mb-3">
+                저해상도와 색감 왜곡, <br />
+                AI 홍보물의 인쇄 실패 해결
+              </h3>
+
+              <p class="text-sm text-neutral-600 leading-relaxed mb-6">
+                모니터 RGB(72dpi)와 실제 인쇄 CMYK(300dpi)의 불일치로 버려지던 인쇄비. 4년 차 편집디자이너의 정밀 벡터화와 조판으로 완벽한 상용 인쇄물을 구현합니다.
+              </p>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-neutral-200 border border-neutral-300/50 mt-2">
+              <img src="/src/assets/images/print_proofing_cmyk_1794013187530.jpg" alt="루페 확대경으로 인쇄 망점 및 CMYK 300DPI 정밀 검수하는 모습" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-sm text-[11px] font-medium text-white flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#B5F21D]"></span>
+                <span>루페 감리 & 300DPI CMYK 교정</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Center Marquee Card (Neon Lime Green #B5F21D with Cutout Mask) -->
+          <div class="bg-[#B5F21D] rounded-[2rem] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 group shadow-md hover:shadow-xl relative overflow-hidden text-neutral-900">
+            <div class="relative z-10 flex items-center justify-between mb-4">
+              <span class="text-[11px] font-bold tracking-wider text-black uppercase px-3 py-1 bg-black/10 rounded-full border border-black/15">
+                CORE SOLUTION
+              </span>
+              <span class="text-xs font-mono font-bold text-black/70">창직 1호 모델</span>
+            </div>
+
+            <!-- Cutout Shaped Mask Framing Merchant Collaboration Photo -->
+            <div class="relative z-10 my-3 flex items-center justify-center">
+              <div class="relative w-64 h-64 sm:w-68 sm:h-68 max-w-full">
+                <div class="absolute inset-0 bg-black/10 rounded-[2.5rem] transform -rotate-3 transition-transform group-hover:rotate-0 duration-300"></div>
+                <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden border-4 border-white shadow-xl">
+                  <img src="/src/assets/images/local_merchant_partner_1794013188864.jpg" alt="지역 동네 베이커리 점주와 편집디자이너의 따뜻한 파트너십 악수" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-3 left-3 right-3 text-center text-white text-xs font-medium bg-black/60 backdrop-blur-xs py-1 rounded-full">
+                    지역 소상공인 밀착 파트너십
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Title & Circular Arrow Button -->
+            <div class="relative z-10 pt-4 flex items-end justify-between gap-4">
+              <div>
+                <div class="text-[11px] font-bold tracking-wider text-black/80 uppercase mb-1">
+                  AI-휴머니즘 옴니채널 마케터
+                </div>
+                <h3 class="text-xl sm:text-2xl font-black text-black tracking-tight leading-snug">
+                  골목 상권의 숨결을 담는 <br />
+                  맞춤형 브랜딩 솔루션
+                </h3>
+              </div>
+
+              <button onclick="openModal('골목 상권 맞춤 브랜딩 상담')" class="w-12 h-12 rounded-full bg-white hover:bg-black text-black hover:text-white flex items-center justify-center shrink-0 transition-all duration-200 shadow-md cursor-pointer" aria-label="상담 신청">
+                <i data-lucide="arrow-up-right" class="w-6 h-6 stroke-[2.5]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Right Card (Off-White, Omnichannel Print & Digital Kit) -->
+          <div class="bg-[#F3F4F6] rounded-[2rem] p-7 sm:p-8 flex flex-col justify-between border border-neutral-200/80 hover:border-neutral-300 transition-all duration-300 group shadow-sm hover:shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-[11px] font-bold tracking-wider text-neutral-600 uppercase px-3 py-1 bg-white rounded-full border border-neutral-200/60 shadow-xs">
+                  OMNICHANNEL
+                </span>
+                <button onclick="openModal('옴니채널 킷 상담')" class="w-10 h-10 rounded-full bg-white group-hover:bg-neutral-900 group-hover:text-white text-neutral-800 flex items-center justify-center transition-all duration-200 shadow-xs cursor-pointer" title="옴니채널 킷 상담">
+                  <i data-lucide="arrow-up-right" class="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                </button>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 tracking-tight leading-snug mb-3">
+                인쇄물과 인스타그램 피드의 <br />
+                완벽한 톤앤매너 일체화
+              </h3>
+
+              <p class="text-sm text-neutral-600 leading-relaxed mb-6">
+                매장 테이블 메뉴판, 쇼윈도 포스터부터 모바일 인스타 피드, 네이버 스마트플레이스까지 고객이 접하는 모든 접점을 하나의 목소리로 통일합니다.
+              </p>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-neutral-200 border border-neutral-300/50 mt-2">
+              <img src="/src/assets/images/omnichannel_branding_kit_1794013188213.jpg" alt="오프라인 인쇄 리플렛과 온라인 모바일 SNS 배너가 통일된 옴니채널 브랜딩 킷" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-sm text-[11px] font-medium text-white flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#B5F21D]"></span>
+                <span>실물 인쇄물 + 모바일 SNS 일체형</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. SERVICES SECTION (Matching Bottom Row of Sample Screenshot) -->
+      <section id="services" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-200/80 text-[11px] font-bold tracking-wider text-neutral-700 uppercase mb-4">
+            <span>SERVICES</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 tracking-tight leading-[1.2]">
+            골목 상권의 숨은 가치를 깨우는 <br class="hidden sm:inline" />
+            4대 통합 브랜딩 솔루션
+          </h2>
+          <p class="mt-4 text-base text-neutral-600 max-w-2xl mx-auto">
+            AI의 빠른 콘셉트 탐색 역량과 4년 차 편집디자이너의 정밀 인쇄 감리가 결합하여, 지역 매장에 꼭 맞는 온·오프라인 결과물을 납품합니다.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Service 1 -->
+          <div class="group bg-white rounded-3xl overflow-hidden border border-neutral-200/80 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div class="relative aspect-[3/4] overflow-hidden bg-neutral-100">
+              <img src="/src/assets/images/service_ai_prompting_1794013267922.jpg" alt="AI 컨셉 도출" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[#B5F21D] flex items-center justify-center shadow-md">
+                <i data-lucide="message-square" class="w-5 h-5 text-black"></i>
+              </div>
+              <div class="absolute top-4 right-4 text-xs font-mono font-bold text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-full">01</div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="text-[10px] font-mono text-[#B5F21D] tracking-wider uppercase font-semibold">AI Concept & Story</span>
+                <h3 class="text-lg font-bold text-white tracking-tight mt-0.5 leading-snug">AI 컨셉 도출 & 골목 스토리</h3>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-4">
+                생성형 AI 브레인스토밍으로 골목 상권의 숨은 역사와 점주님의 철학을 신속하게 비주얼 무드보드로 구체화합니다.
+              </p>
+              <div class="space-y-1.5 mb-5 pt-3 border-t border-neutral-100 text-xs text-neutral-700">
+                <div class="flex items-center gap-2">
+                  <span class="w-4 h-4 rounded-full bg-[#B5F21D]/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-2.5 h-2.5 text-neutral-900 stroke-[3]"></i></span>
+                  <span>매장 고유 키워드 추출</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-4 h-4 rounded-full bg-[#B5F21D]/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-2.5 h-2.5 text-neutral-900 stroke-[3]"></i></span>
+                  <span>비주얼 무드보드 3종</span>
+                </div>
+              </div>
+              <button onclick="openModal('01. AI 컨셉 도출 & 골목 스토리텔링 문의')" class="w-full py-2.5 px-3 rounded-xl bg-neutral-100 hover:bg-[#B5F21D] text-neutral-900 text-xs font-bold transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                <span>상세 문의 및 견적</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="group bg-white rounded-3xl overflow-hidden border border-neutral-200/80 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div class="relative aspect-[3/4] overflow-hidden bg-neutral-100">
+              <img src="/src/assets/images/service_print_press_1794013269933.jpg" alt="300DPI 인쇄 감리" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[#B5F21D] flex items-center justify-center shadow-md">
+                <i data-lucide="clock" class="w-5 h-5 text-black"></i>
+              </div>
+              <div class="absolute top-4 right-4 text-xs font-mono font-bold text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-full">02</div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="text-[10px] font-mono text-[#B5F21D] tracking-wider uppercase font-semibold">CMYK Proofing</span>
+                <h3 class="text-lg font-bold text-white tracking-tight mt-0.5 leading-snug">300DPI 인쇄 감리 & 지질</h3>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-4">
+                인디자인 정밀 조판과 도련 여백(Bleed), 아르떼·랑데뷰 등 매장 조명에 최적화된 특수 지질을 직접 감리합니다.
+              </p>
+              <div class="space-y-1.5 mb-5 pt-3 border-t border-neutral-100 text-xs text-neutral-700">
+                <div class="flex items-center gap-2">
+                  <span class="w-4 h-4 rounded-full bg-[#B5F21D]/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-2.5 h-2.5 text-neutral-900 stroke-[3]"></i></span>
+                  <span>CMYK 색감 보정 & 칼선 지정</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-4 h-4 rounded-full bg-[#B5F21D]/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-2.5 h-2.5 text-neutral-900 stroke-[3]"></i></span>
+                  <span>인쇄소 직접 감리 대행</span>
+                </div>
+              </div>
+              <button onclick="openModal('02. 300DPI 인쇄 감리 & 지질 큐레이션 문의')" class="w-full py-2.5 px-3 rounded-xl bg-neutral-100 hover:bg-[#B5F21D] text-neutral-900 text-xs font-bold transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                <span>상세 문의 및 견적</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="group bg-white rounded-3xl overflow-hidden border border-neutral-200/80 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div class="relative aspect-[3/4] overflow-hidden bg-neutral-100">
+              <img src="/src/assets/images/service_local_storefront_1794013268977.jpg" alt="오프라인 매장 홍보물" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[#B5F21D] flex items-center justify-center shadow-md">
+                <i data-lucide="store" class="w-5 h-5 text-black"></i>
+              </div>
+              <div class="absolute top-4 right-4 text-xs font-mono font-bold text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-full">03</div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="text-[10px] font-mono text-[#B5F21D] tracking-wider uppercase font-semibold">Store Print Kit</span>
+                <h3 class="text-lg font-bold text-white tracking-tight mt-0.5 leading-snug">오프라인 매장 홍보물 세트</h3>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-4">
+                방수 코팅 메뉴판, 쇼윈도 포스터, 테이크아웃 슬리브, 로컬 감성 스탬프 쿠폰을 완성도 높게 일괄 제작합니다.
+              </p>
+              <div class="space-y-1.5 mb-5 pt-3 border-t border-neutral-100 text-xs text-neutral-700">
+                <div class="flex items-center gap-2">
+                  <span class="w-4 h-4 rounded-full bg-[#B5F21D]/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-2.5 h-2.5 text-neutral-900 stroke-[3]"></i></span>
+                  <span>방수 코팅 테이블 메뉴판</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-4 h-4 rounded-full bg-[#B5F21D]/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-2.5 h-2.5 text-neutral-900 stroke-[3]"></i></span>
+                  <span>쇼윈도 A2 홍보 포스터</span>
+                </div>
+              </div>
+              <button onclick="openModal('03. 오프라인 매장 맞춤 홍보물 세트 문의')" class="w-full py-2.5 px-3 rounded-xl bg-neutral-100 hover:bg-[#B5F21D] text-neutral-900 text-xs font-bold transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                <span>상세 문의 및 견적</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="group bg-white rounded-3xl overflow-hidden border border-neutral-200/80 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div class="relative aspect-[3/4] overflow-hidden bg-neutral-100">
+              <img src="/src/assets/images/service_mobile_sns_1794013269173.jpg" alt="디지털 옴니채널 SNS" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[#B5F21D] flex items-center justify-center shadow-md">
+                <i data-lucide="laptop" class="w-5 h-5 text-black"></i>
+              </div>
+              <div class="absolute top-4 right-4 text-xs font-mono font-bold text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-full">04</div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="text-[10px] font-mono text-[#B5F21D] tracking-wider uppercase font-semibold">Digital Omnichannel</span>
+                <h3 class="text-lg font-bold text-white tracking-tight mt-0.5 leading-snug">디지털 옴니채널 SNS 배너</h3>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-4">
+                실물 인쇄물의 감성을 그대로 디지털로 이식하여 인스타그램 피드, 스토리, 네이버 스마트플레이스 규격으로 완벽 제공합니다.
+              </p>
+              <div class="space-y-1.5 mb-5 pt-3 border-t border-neutral-100 text-xs text-neutral-700">
+                <div class="flex items-center gap-2">
+                  <span class="w-4 h-4 rounded-full bg-[#B5F21D]/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-2.5 h-2.5 text-neutral-900 stroke-[3]"></i></span>
+                  <span>인스타그램 피드 템플릿 6종</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-4 h-4 rounded-full bg-[#B5F21D]/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-2.5 h-2.5 text-neutral-900 stroke-[3]"></i></span>
+                  <span>네이버 플레이스 소식 배너</span>
+                </div>
+              </div>
+              <button onclick="openModal('04. 디지털 옴니채널 SNS 배너 팩 문의')" class="w-full py-2.5 px-3 rounded-xl bg-neutral-100 hover:bg-[#B5F21D] text-neutral-900 text-xs font-bold transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                <span>상세 문의 및 견적</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. INTERACTIVE RGB vs CMYK COLOR & PRINT PROOFING SIMULATOR -->
+      <section id="simulator" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-neutral-900 rounded-[2.5rem] p-6 sm:p-10 lg:p-12 text-white border border-neutral-800 shadow-2xl relative overflow-hidden">
+          <div class="absolute -top-32 -right-32 w-96 h-96 bg-[#B5F21D]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-8 border-b border-neutral-800">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-[#B5F21D] mb-3">
+                <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+                <span>실제 인쇄물 시뮬레이터 (Print Proofing Engine)</span>
+              </div>
+              <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+                스마트폰 화면에서 예뻤던 홍보물이, <br class="hidden sm:inline" />
+                <span class="text-[#B5F21D]">인쇄소만 가면 왜 칙칙해질까요?</span>
+              </h2>
+              <p class="mt-3 text-sm sm:text-base text-neutral-300 max-w-xl">
+                모니터의 빛(RGB 72DPI)과 실제 인쇄기의 잉크(CMYK 300DPI)는 원리가 다릅니다. 버튼 하나로 AI 원본과 4년 차 편집디자이너의 감리 차이를 직접 확인해 보세요.
+              </p>
+            </div>
+
+            <!-- Mode Switcher Buttons -->
+            <div class="flex items-center gap-1 p-1.5 bg-neutral-800/90 rounded-2xl border border-neutral-700/60 shrink-0 self-start md:self-auto">
+              <button id="btn-mode-ai" onclick="setSimulatorMode('ai_raw')" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer text-neutral-400 hover:text-white">
+                <i data-lucide="alert-octagon" class="w-4 h-4 text-rose-400"></i>
+                <span>AI 원본 날것 (72DPI)</span>
+              </button>
+              <button id="btn-mode-designer" onclick="setSimulatorMode('designer')" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer bg-[#B5F21D] text-black font-extrabold shadow-md">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-black"></i>
+                <span>디자이너 정밀 감리 (300DPI)</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Simulated Print Canvas -->
+            <div class="lg:col-span-7 flex flex-col items-center">
+              <div id="sim-sheet" class="w-full max-w-md aspect-[3/4] rounded-2xl p-6 shadow-2xl transition-all duration-300 relative border flex flex-col justify-between overflow-hidden bg-[#faf8f5] border-[#B5F21D]/50">
+                <div id="bleed-lines" class="absolute inset-2 border border-dashed border-cyan-500/40 pointer-events-none rounded-xl">
+                  <span class="absolute top-1 left-1 text-[9px] font-mono text-cyan-600 bg-white/70 px-1 rounded">안전 재단선 (Bleed +3mm)</span>
+                </div>
+
+                <div class="relative z-10">
+                  <div class="flex items-center justify-between">
+                    <span id="sim-badge" class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-black text-[#B5F21D]">SEASON SPECIAL</span>
+                    <span id="sim-dpi" class="text-[11px] font-mono text-neutral-500">CMYK / 300 DPI</span>
+                  </div>
+
+                  <div class="mt-6">
+                    <h4 id="sim-title" class="text-2xl font-black tracking-tight leading-tight text-neutral-900">
+                      봄맞이 수제 바닐라빈 <br />딸기 생크림 케이크
+                    </h4>
+                    <p class="mt-2 text-xs leading-relaxed text-neutral-700">
+                      동네 농장에서 당일 새벽 수확한 유기농 딸기와 프랑스산 고메버터로 매일 아침 구워냅니다.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="relative my-4 rounded-xl overflow-hidden aspect-[4/3] bg-neutral-200">
+                  <img id="sim-image" src="/src/assets/images/service_mobile_sns_1794013269173.jpg" alt="케이크 홍보물" class="w-full h-full object-cover filter brightness-100 contrast-105" />
+                  <div id="sim-warning" class="hidden absolute inset-0 bg-rose-950/20 backdrop-blur-[1px] flex items-center justify-center p-4">
+                    <span class="text-center text-xs font-bold text-white bg-black/85 px-3 py-1.5 rounded-lg border border-rose-500/50">
+                      ⚠️ 픽셀 깨짐 & 탁한 CMYK 변색 발생
+                    </span>
+                  </div>
+                </div>
+
+                <div class="relative z-10 pt-2 border-t border-neutral-300/50 flex items-center justify-between text-[11px]">
+                  <div class="text-neutral-700 font-bold">연남 하루카페 · 일일 한정 판매</div>
+                  <div id="sim-pantone" class="font-mono text-neutral-500">별색 Pantone 185C 지정</div>
+                </div>
+              </div>
+
+              <div class="mt-4 flex items-center gap-3 text-xs text-neutral-400">
+                <span class="flex items-center gap-1">
+                  <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-[#B5F21D]"></i>
+                  루페 감리 배율: 100% 실물 크기
+                </span>
+                <span>·</span>
+                <span id="sim-verdict" class="text-[#B5F21D] font-semibold">인쇄소 즉시 출력 가능 (감리 보증 완료)</span>
+              </div>
+            </div>
+
+            <!-- Parameters & Paper Selection -->
+            <div class="lg:col-span-5 space-y-6">
+              <div class="bg-neutral-800/80 rounded-2xl p-5 border border-neutral-700/60">
+                <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+                  <i data-lucide="eye" class="w-4 h-4 text-[#B5F21D]"></i>
+                  <span>정밀 진단 리포트 비교</span>
+                </h3>
+
+                <div class="space-y-3 text-xs">
+                  <div class="flex items-start justify-between pb-2.5 border-b border-neutral-700">
+                    <span class="text-neutral-400">해상도 (Resolution)</span>
+                    <span id="res-val" class="text-[#B5F21D] font-bold">300 DPI 고해상도 벡터</span>
+                  </div>
+                  <div class="flex items-start justify-between pb-2.5 border-b border-neutral-700">
+                    <span class="text-neutral-400">색상 모드 (Color Mode)</span>
+                    <span id="color-val" class="text-[#B5F21D] font-bold">CMYK + 별색(Pantone) 감리</span>
+                  </div>
+                  <div class="flex items-start justify-between pb-2.5 border-b border-neutral-700">
+                    <span class="text-neutral-400">재단 여백 (Bleed Margin)</span>
+                    <span id="bleed-val" class="text-[#B5F21D] font-bold">상하좌우 3mm 도련 완비</span>
+                  </div>
+                  <div class="flex items-start justify-between">
+                    <span class="text-neutral-400">사후 수정 가능성</span>
+                    <span id="edit-val" class="text-[#B5F21D] font-bold">인디자인 레이어 100% 수정 가능</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Paper Selection Buttons -->
+              <div class="bg-neutral-800/80 rounded-2xl p-5 border border-neutral-700/60">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-sm font-bold text-white">매장 분위기별 추천 지질 (Paper)</h3>
+                  <span class="text-[11px] text-[#B5F21D] font-mono">4년 차 디자이너 큐레이션</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button onclick="setPaper('arte')" class="p-3 rounded-xl text-left border border-[#B5F21D] bg-neutral-700/80 cursor-pointer">
+                    <div class="flex items-center gap-1.5 mb-1">
+                      <span class="w-3 h-3 rounded-full border border-black/20 bg-[#faf8f5]"></span>
+                      <span class="text-xs font-bold text-white truncate">아르떼 (Arte 210g)</span>
+                    </div>
+                    <div class="text-[10px] text-neutral-400 leading-tight">자연스러운 요철과 잉크 발색도 최고</div>
+                  </button>
+
+                  <button onclick="setPaper('rendezvous')" class="p-3 rounded-xl text-left border border-neutral-700 hover:border-neutral-600 bg-neutral-900/40 text-neutral-300 cursor-pointer">
+                    <div class="flex items-center gap-1.5 mb-1">
+                      <span class="w-3 h-3 rounded-full border border-black/20 bg-[#fcfcfb]"></span>
+                      <span class="text-xs font-bold text-white truncate">랑데뷰 (240g)</span>
+                    </div>
+                    <div class="text-[10px] text-neutral-400 leading-tight">도톰한 부피감과 품격 있는 무광택</div>
+                  </button>
+
+                  <button onclick="setPaper('kraft')" class="p-3 rounded-xl text-left border border-neutral-700 hover:border-neutral-600 bg-neutral-900/40 text-neutral-300 cursor-pointer">
+                    <div class="flex items-center gap-1.5 mb-1">
+                      <span class="w-3 h-3 rounded-full border border-black/20 bg-[#e2c7a2]"></span>
+                      <span class="text-xs font-bold text-white truncate">친환경 크라프트</span>
+                    </div>
+                    <div class="text-[10px] text-neutral-400 leading-tight">천연 황갈색 펄프, 전통시장·공방 최적</div>
+                  </button>
+
+                  <button onclick="setPaper('matte')" class="p-3 rounded-xl text-left border border-neutral-700 hover:border-neutral-600 bg-neutral-900/40 text-neutral-300 cursor-pointer">
+                    <div class="flex items-center gap-1.5 mb-1">
+                      <span class="w-3 h-3 rounded-full border border-black/20 bg-[#ffffff]"></span>
+                      <span class="text-xs font-bold text-white truncate">스노우 화이트</span>
+                    </div>
+                    <div class="text-[10px] text-neutral-400 leading-tight">경제적인 단가, 대량 배포용 전단</div>
+                  </button>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <button onclick="openModal('우리 매장 인쇄 파일 무료 색감 진단')" class="w-full py-3.5 px-6 rounded-2xl bg-[#B5F21D] hover:bg-[#a2dc15] text-black font-extrabold text-sm transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                  <span>우리 매장 인쇄 파일 무료 색감 진단 받기</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. REVENUE MODELS & INTERACTIVE PLAN ESTIMATOR -->
+      <section id="packages" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-200/80 text-[11px] font-bold tracking-wider text-neutral-700 uppercase mb-3">
+            <span>BUSINESS MODEL</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 tracking-tight leading-tight">
+            수익 모델 & 맞춤 서비스 플랜
+          </h2>
+          <p class="mt-4 text-sm sm:text-base text-neutral-600">
+            신규 오픈이나 리브랜딩을 위한 단기 집중 프로젝트부터, 계절마다 새 홍보물이 배송되는 정기 구독까지 점포의 성장 단계에 맞춰 선택할 수 있습니다.
+          </p>
+        </div>
+
+        <!-- 2 Core Revenue Model Cards from Report -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <!-- Model A Card -->
+          <div class="rounded-3xl p-8 sm:p-10 flex flex-col justify-between bg-neutral-900 text-white border border-neutral-800 shadow-xl">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#B5F21D] text-black">단기 집중 프로젝트</span>
+                <span class="text-xs font-mono text-neutral-400">신규 오픈 · 전체 리브랜딩 · 메뉴 개편</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold tracking-tight mb-3">
+                수익 모델 A: 온·오프라인 통합 런칭 프로젝트
+              </h3>
+              <p class="text-sm leading-relaxed mb-6 text-neutral-300">
+                골목 점포의 정체성을 처음부터 다시 세우는 올인원 프로젝트로, AI 기획부터 최종 인쇄 납품과 디지털 배너 런칭까지 2주 내 원스톱 완성합니다.
+              </p>
+              <div class="p-3.5 rounded-2xl mb-6 text-xs font-semibold flex items-center gap-2 bg-neutral-800 text-[#B5F21D]">
+                <i data-lucide="sparkles" class="w-4 h-4 shrink-0"></i>
+                <span>프로젝트 단위 맞춤 견적 (무료 방문 실측 및 지질 샘플북 제공)</span>
+              </div>
+              <div class="space-y-3 mb-8">
+                <div class="text-xs font-bold uppercase tracking-wider text-neutral-400">제공 서비스 내역</div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-200">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-[#B5F21D] text-black"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>현장 방문 미팅 및 상권 감성 심층 인터뷰</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-200">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-[#B5F21D] text-black"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>AI 기반 브랜딩 키 비주얼 및 무드보드 도출</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-200">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-[#B5F21D] text-black"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>오프라인 인쇄물 4종 (메뉴판 + A2 포스터 + 명함 + 스티커)</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-200">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-[#B5F21D] text-black"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>디지털 배너 8종 (인스타그램 피드/스토리 + 네이버 플레이스)</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-200">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-[#B5F21D] text-black"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>인쇄소 감리 및 특수 지질 큐레이션 보증</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openModal('수익 모델 A (통합 런칭 프로젝트)')" class="w-full py-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 transition-all cursor-pointer bg-[#B5F21D] hover:bg-[#a2dc15] text-black shadow-lg">
+              <span>프로젝트 의뢰 및 방문 실측 신청</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Model B Card -->
+          <div class="rounded-3xl p-8 sm:p-10 flex flex-col justify-between bg-white text-neutral-900 border border-neutral-200/80 shadow-md hover:shadow-lg">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-neutral-100 text-neutral-700 border border-neutral-200">분기/시즌별 정기 구독</span>
+                <span class="text-xs font-mono text-neutral-500">계절 메뉴 · 분기별 이벤트 매장</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold tracking-tight mb-3">
+                수익 모델 B: 시즌별 로컬 프로모션 키트 정기 구독
+              </h3>
+              <p class="text-sm leading-relaxed mb-6 text-neutral-600">
+                봄·여름·가을·겨울 시즌마다 사장님의 고민 없이 트렌드에 맞는 홍보물이 자동으로 매장과 SNS에 세팅되는 정기 구독 파트너십입니다.
+              </p>
+              <div class="p-3.5 rounded-2xl mb-6 text-xs font-semibold flex items-center gap-2 bg-neutral-50 text-neutral-800 border border-neutral-200/60">
+                <i data-lucide="sparkles" class="w-4 h-4 shrink-0 text-[#B5F21D]"></i>
+                <span>분기별 정기 납품 (시즌 시작 2주 전 사전 안심 배송)</span>
+              </div>
+              <div class="space-y-3 mb-8">
+                <div class="text-xs font-bold uppercase tracking-wider text-neutral-500">제공 서비스 내역</div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-neutral-900 text-white"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>연 4회 (봄/여름/가을/겨울) 시즌 프로모션 기획 미팅</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-neutral-900 text-white"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>시즌 한정 메뉴판 슬리브 교체물 & 시즌 포스터 배송</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-neutral-900 text-white"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>시즌별 인스타그램 릴스/스토리 프로모션 배너 팩</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-neutral-900 text-white"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>단골 고객용 시즌 스탬프 이벤트 쿠폰 디자인</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700">
+                  <span class="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-neutral-900 text-white"><i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i></span>
+                  <span>긴급 수정 및 소량 추가 인쇄 우선 지원권</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openModal('수익 모델 B (시즌 정기 구독 키트)')" class="w-full py-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 transition-all cursor-pointer bg-neutral-900 hover:bg-neutral-800 text-white shadow-md">
+              <span>시즌 정기 구독 상담 신청</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Custom Estimator -->
+        <div class="bg-[#F3F4F6] rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-xs">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-neutral-200">
+            <div>
+              <div class="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-800 uppercase mb-1">
+                <i data-lucide="layers" class="w-4 h-4 text-neutral-900"></i>
+                <span>우리 매장 맞춤 구성 시뮬레이터</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-neutral-900">
+                필요한 항목을 선택하고 예상 일정과 추천 모델을 확인해 보세요
+              </h3>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-medium text-neutral-600 bg-white px-3.5 py-2 rounded-full border border-neutral-200 self-start lg:self-auto">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+              <span>지역 3곳 한정 무료 시범 제작 지원 가능</span>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2.5">
+              1. 점포 업종 선택
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+              <button onclick="selectCategory('cafe', this)" class="cat-btn py-2.5 px-3 rounded-xl text-xs font-bold text-center border transition-all cursor-pointer bg-neutral-900 text-white border-neutral-900">☕ 카페/디저트</button>
+              <button onclick="selectCategory('bakery', this)" class="cat-btn py-2.5 px-3 rounded-xl text-xs font-bold text-center border transition-all cursor-pointer bg-white text-neutral-700 border-neutral-200 hover:border-neutral-300">🥖 독립 베이커리</button>
+              <button onclick="selectCategory('market', this)" class="cat-btn py-2.5 px-3 rounded-xl text-xs font-bold text-center border transition-all cursor-pointer bg-white text-neutral-700 border-neutral-200 hover:border-neutral-300">🌾 전통시장/방앗간</button>
+              <button onclick="selectCategory('restaurant', this)" class="cat-btn py-2.5 px-3 rounded-xl text-xs font-bold text-center border transition-all cursor-pointer bg-white text-neutral-700 border-neutral-200 hover:border-neutral-300">🍲 골목 식당/주점</button>
+              <button onclick="selectCategory('craft', this)" class="cat-btn py-2.5 px-3 rounded-xl text-xs font-bold text-center border transition-all cursor-pointer bg-white text-neutral-700 border-neutral-200 hover:border-neutral-300">🏺 수제 공방/소품</button>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2.5">
+              2. 제작 희망 품목 (다중 선택 가능)
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <label class="item-checkbox p-3.5 rounded-xl border flex items-center justify-between gap-3 cursor-pointer bg-white border-neutral-900 shadow-xs">
+                <div>
+                  <div class="text-[10px] font-mono text-neutral-400">인쇄물</div>
+                  <div class="text-xs font-bold">시그니처 메뉴판 (방수 코팅 or 아르떼지)</div>
+                </div>
+                <input type="checkbox" checked onchange="updateEstimator()" class="rounded border-neutral-300 text-neutral-900 w-4 h-4" />
+              </label>
+
+              <label class="item-checkbox p-3.5 rounded-xl border flex items-center justify-between gap-3 cursor-pointer bg-white border-neutral-900 shadow-xs">
+                <div>
+                  <div class="text-[10px] font-mono text-neutral-400">인쇄물</div>
+                  <div class="text-xs font-bold">쇼윈도 A2/A3 홍보 포스터 (랑데뷰지)</div>
+                </div>
+                <input type="checkbox" checked onchange="updateEstimator()" class="rounded border-neutral-300 text-neutral-900 w-4 h-4" />
+              </label>
+
+              <label class="item-checkbox p-3.5 rounded-xl border flex items-center justify-between gap-3 cursor-pointer bg-white border-neutral-900 shadow-xs">
+                <div>
+                  <div class="text-[10px] font-mono text-neutral-400">디지털</div>
+                  <div class="text-xs font-bold">인스타그램 피드 & 스토리 배너 템플릿</div>
+                </div>
+                <input type="checkbox" checked onchange="updateEstimator()" class="rounded border-neutral-300 text-neutral-900 w-4 h-4" />
+              </label>
+
+              <label class="item-checkbox p-3.5 rounded-xl border flex items-center justify-between gap-3 cursor-pointer bg-white/60 border-neutral-200">
+                <div>
+                  <div class="text-[10px] font-mono text-neutral-400">인쇄물</div>
+                  <div class="text-xs font-bold">패키지 스티커 & 쿠폰 스탬프 카드</div>
+                </div>
+                <input type="checkbox" onchange="updateEstimator()" class="rounded border-neutral-300 text-neutral-900 w-4 h-4" />
+              </label>
+
+              <label class="item-checkbox p-3.5 rounded-xl border flex items-center justify-between gap-3 cursor-pointer bg-white/60 border-neutral-200">
+                <div>
+                  <div class="text-[10px] font-mono text-neutral-400">디지털</div>
+                  <div class="text-xs font-bold">네이버 스마트플레이스 대표/소식 배너</div>
+                </div>
+                <input type="checkbox" onchange="updateEstimator()" class="rounded border-neutral-300 text-neutral-900 w-4 h-4" />
+              </label>
+
+              <label class="item-checkbox p-3.5 rounded-xl border flex items-center justify-between gap-3 cursor-pointer bg-white/60 border-neutral-200">
+                <div>
+                  <div class="text-[10px] font-mono text-neutral-400">인쇄물</div>
+                  <div class="text-xs font-bold">가게 스토리텔링 3단 리플렛</div>
+                </div>
+                <input type="checkbox" onchange="updateEstimator()" class="rounded border-neutral-300 text-neutral-900 w-4 h-4" />
+              </label>
+            </div>
+          </div>
+
+          <div class="mt-8 p-5 bg-white rounded-2xl border border-neutral-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <div class="text-xs text-neutral-500">
+                선택한 품목: <strong id="est-count" class="text-neutral-900">3개</strong> · 예상 제작 소요: <strong id="est-days" class="text-neutral-900">3~5영업일</strong>
+              </div>
+              <div class="text-sm font-extrabold text-neutral-900 flex items-center gap-2">
+                <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#B5F21D] text-black">권장 플랜</span>
+                <span id="est-plan">수익 모델 B (시즌별 정기 구독 킷)</span>
+              </div>
+            </div>
+
+            <button onclick="openModal('맞춤 계산기 추천 플랜 상담')" class="px-5 py-2.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shrink-0">
+              <span>이 구성으로 상담 신청</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. MVP VERIFICATION CASES (3 LOCAL SHOPS) -->
+      <section id="cases" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-200/80 text-[11px] font-bold tracking-wider text-neutral-700 uppercase mb-3">
+            <span>MVP PROOF & VALIDATION</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 tracking-tight leading-tight">
+            지역 소상공인 3개 점포 <br class="hidden sm:inline" />
+            무료 시범 제작 및 효용성 검증
+          </h2>
+          <p class="mt-4 text-sm sm:text-base text-neutral-600">
+            집 근처 전통시장 상점과 골목 카페 3곳을 대상으로 AI-휴머니즘 옴니채널 홍보물을 직접 제작하고 실제 인쇄물 만족도와 매출 반응을 검증했습니다.
+          </p>
+        </div>
+
+        <!-- Case Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+          <button id="case-tab-1" onclick="switchCase(1)" class="case-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer bg-neutral-900 text-white shadow-md">
+            <span>고향기름집</span>
+            <span class="text-[11px] opacity-70 ml-1.5 font-normal hidden sm:inline">(전통시장)</span>
+          </button>
+          <button id="case-tab-2" onclick="switchCase(2)" class="case-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200">
+            <span>연남 하루카페</span>
+            <span class="text-[11px] opacity-70 ml-1.5 font-normal hidden sm:inline">(스페셜티)</span>
+          </button>
+          <button id="case-tab-3" onclick="switchCase(3)" class="case-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200">
+            <span>그루터기 제빵소</span>
+            <span class="text-[11px] opacity-70 ml-1.5 font-normal hidden sm:inline">(독립베이커리)</span>
+          </button>
+        </div>
+
+        <!-- Featured Case Details Card -->
+        <div class="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-md">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 space-y-6">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-[#B5F21D] text-black font-extrabold text-xs">검증 완료 Case</span>
+                <span class="flex items-center gap-1 text-xs text-neutral-500">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                  <span id="case-location">지역 중앙전통시장 골목</span>
+                </span>
+              </div>
+
+              <div>
+                <h3 id="case-name" class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">고향기름집</h3>
+                <p id="case-cat" class="text-xs sm:text-sm text-neutral-500 mt-0.5">전통시장 30년 전통 방앗간</p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-100">
+                  <div class="text-xs font-bold text-rose-700 mb-1">점주님의 초기 Pain Point</div>
+                  <p id="case-problem" class="text-xs text-neutral-700 leading-relaxed">
+                    인터넷 무료 AI 프로그램으로 만든 라벨을 가정용 프린터로 뽑아 붙였으나 기름에 젖어 번지고, 손님들이 촌스럽다고 외면함.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100">
+                  <div class="text-xs font-bold text-emerald-800 mb-1">창직자의 맞춤 솔루션</div>
+                  <p id="case-solution" class="text-xs text-neutral-700 leading-relaxed">
+                    30년 가업의 진정성을 살린 서예풍 타이포그래피와 방수 내유성 특수 유포지 라벨 도입 + 추석 선물세트 스토리텔링 리플렛 제작.
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-neutral-50 border border-neutral-100">
+                <div class="text-center">
+                  <div id="stat-1-val" class="text-lg sm:text-2xl font-black text-neutral-900 tabular-nums">+35%</div>
+                  <div id="stat-1-lbl" class="text-[11px] text-neutral-500 mt-0.5 font-medium">선물세트 매출</div>
+                </div>
+                <div class="text-center">
+                  <div id="stat-2-val" class="text-lg sm:text-2xl font-black text-neutral-900 tabular-nums">+48%</div>
+                  <div id="stat-2-lbl" class="text-[11px] text-neutral-500 mt-0.5 font-medium">2030 신규 유입</div>
+                </div>
+                <div class="text-center">
+                  <div id="stat-3-val" class="text-lg sm:text-2xl font-black text-neutral-900 tabular-nums">0%</div>
+                  <div id="stat-3-lbl" class="text-[11px] text-neutral-500 mt-0.5 font-medium">인쇄 불량률</div>
+                </div>
+              </div>
+
+              <div id="case-tags" class="flex flex-wrap gap-1.5 pt-1">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-600 font-medium">#전통시장 혁신</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-600 font-medium">#내유성 방수 라벨</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-600 font-medium">#스토리 리플렛</span>
+              </div>
+            </div>
+
+            <!-- Testimonial Quote Box -->
+            <div class="lg:col-span-5 bg-neutral-900 rounded-2xl p-6 sm:p-8 text-white flex flex-col justify-between h-full space-y-6">
+              <i data-lucide="quote" class="w-10 h-10 text-[#B5F21D] opacity-80"></i>
+              <blockquote id="case-quote" class="text-base sm:text-lg font-medium leading-relaxed text-neutral-200">
+                “모니터로 볼 땐 몰랐는데 기름병에 딱 붙는 내유성 용지와 고급스런 인쇄 마감을 보고 감탄했습니다. 동네에 이런 전문가가 계셔서 든든합니다.”
+              </blockquote>
+              <div class="pt-4 border-t border-neutral-800 flex items-center justify-between">
+                <div>
+                  <div id="case-owner" class="text-sm font-bold text-white">박정식 대표 (62세)</div>
+                  <div id="case-owner-store" class="text-xs text-neutral-400">고향기름집</div>
+                </div>
+                <button onclick="openModal('MVP 시범 점포 참여 신청')" class="px-3.5 py-2 rounded-xl bg-[#B5F21D] hover:bg-[#a2dc15] text-black text-xs font-bold transition-all flex items-center gap-1 cursor-pointer">
+                  <span>시범 참여 신청</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. REGIONAL SETTLEMENT & GOVERNANCE ROADMAP -->
+      <section id="settlement" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-[#111827] rounded-[2.5rem] p-8 sm:p-12 lg:p-16 text-white border border-neutral-800 relative overflow-hidden shadow-2xl">
+          <div class="relative z-10 max-w-3xl mb-14">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#B5F21D]/20 text-[#B5F21D] text-[11px] font-bold tracking-wider uppercase mb-3">
+              <span>REGIONAL SETTLEMENT ROADMAP</span>
+            </div>
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+              지역 정주형 1인 창직자의 <br />
+              <span class="text-[#B5F21D]">상생 생태계 및 거버넌스 연계</span>
+            </h2>
+            <p class="mt-4 text-sm sm:text-base text-neutral-300 leading-relaxed">
+              자택 홈 오피스와 고성능 워크스테이션 인프라를 거점으로, 이동 제약 없이 지역 상권에 뿌리내리며 골목 소상공인과 상생하는 지속 가능한 1인 기업 모델입니다.
+            </p>
+          </div>
+
+          <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="bg-neutral-800/70 hover:bg-neutral-800 rounded-2xl p-6 border border-neutral-700/60 transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="w-10 h-10 rounded-full bg-[#B5F21D] flex items-center justify-center">
+                    <i data-lucide="home" class="w-5 h-5 text-black"></i>
+                  </div>
+                  <span class="text-xs font-mono font-bold text-neutral-400">01</span>
+                </div>
+                <div class="text-[11px] font-bold text-[#B5F21D] uppercase tracking-wider mb-1">이동 제약 없는 밀착 케어</div>
+                <h3 class="text-base font-bold text-white mb-2 leading-snug">자택 홈 오피스 & 고성능 인프라</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                  RTX 고성능 그래픽 워크스테이션 및 캘리브레이션 4K 모니터 완비로 당일 긴급 수정 및 상시 현장 출동 대응이 가능합니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-neutral-800/70 hover:bg-neutral-800 rounded-2xl p-6 border border-neutral-700/60 transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="w-10 h-10 rounded-full bg-[#B5F21D] flex items-center justify-center">
+                    <i data-lucide="users" class="w-5 h-5 text-black"></i>
+                  </div>
+                  <span class="text-xs font-mono font-bold text-neutral-400">02</span>
+                </div>
+                <div class="text-[11px] font-bold text-[#B5F21D] uppercase tracking-wider mb-1">골목 상권 공동 브랜딩</div>
+                <h3 class="text-base font-bold text-white mb-2 leading-snug">지역 상인회 협력 네트워크</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                  개별 점포의 한계를 넘어 골목 전체의 스토리와 정체성을 통일하는 골목 축제 및 공동 쿠폰북 기획에 기여합니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-neutral-800/70 hover:bg-neutral-800 rounded-2xl p-6 border border-neutral-700/60 transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="w-10 h-10 rounded-full bg-[#B5F21D] flex items-center justify-center">
+                    <i data-lucide="building-2" class="w-5 h-5 text-black"></i>
+                  </div>
+                  <span class="text-xs font-mono font-bold text-neutral-400">03</span>
+                </div>
+                <div class="text-[11px] font-bold text-[#B5F21D] uppercase tracking-wider mb-1">공공 거버넌스 사업 결합</div>
+                <h3 class="text-base font-bold text-white mb-2 leading-snug">도시재생 & 청년창업센터 연계</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                  소상공인 지원 바우처, 청년 창업 인프라 사업과 결합하여 점주님들의 비용 부담을 낮추고 공공 프로젝트를 수주합니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-neutral-800/70 hover:bg-neutral-800 rounded-2xl p-6 border border-neutral-700/60 transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="w-10 h-10 rounded-full bg-[#B5F21D] flex items-center justify-center">
+                    <i data-lucide="trophy" class="w-5 h-5 text-black"></i>
+                  </div>
+                  <span class="text-xs font-mono font-bold text-neutral-400">04</span>
+                </div>
+                <div class="text-[11px] font-bold text-[#B5F21D] uppercase tracking-wider mb-1">지역 대표 1인 창직 모델</div>
+                <h3 class="text-base font-bold text-white mb-2 leading-snug">장기적 정주 & 지역 활성화 기여</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                  오프라인 감성과 AI 기술을 모두 아우르는 대체 불가능한 지역 전문가로서 상권 활성화와 청년 로컬 정주의 모범 사례를 창출합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative z-10 bg-neutral-900/90 rounded-2xl p-6 border border-neutral-700/80 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                <i data-lucide="cpu" class="w-6 h-6 text-[#B5F21D]"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-white flex items-center gap-2">
+                  <span>자택 홈 오피스 & 고성능 워크스테이션 인프라</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px]">정주 인프라 완비</span>
+                </div>
+                <p class="text-xs text-neutral-400 mt-0.5">
+                  RTX 고성능 그래픽 워크스테이션 · 인쇄 감리용 전문가급 sRGB/DCI-P3 캘리브레이션 4K 듀얼 모니터 · 인디자인/일러스트 정품 라이선스
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 shrink-0 text-xs text-neutral-300">
+              <span class="flex items-center gap-1">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#B5F21D]"></i>
+                이동 제약 없는 상시 협업
+              </span>
+              <span class="text-neutral-600">·</span>
+              <span class="flex items-center gap-1">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#B5F21D]"></i>
+                골목 상점 당일 긴급 대응
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-neutral-950 text-white pt-16 pb-12 border-t border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-neutral-800">
+          <div class="md:col-span-5 space-y-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-[#B5F21D] flex items-center justify-center text-black font-black text-lg">✻</div>
+              <span class="font-bold text-xl tracking-tight text-white">
+                LocalNook <span class="text-[#B5F21D] text-xs font-mono">STUDIO</span>
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-400 max-w-sm leading-relaxed">
+              자택 홈 오피스와 고성능 워크스테이션 인프라를 바탕으로, 이동 제약 없이 지역 소상공인과 밀착 소통하며 골목 상권에 안정적으로 정주하는 1인 창직 모델입니다.
+            </p>
+            <div class="pt-2 flex flex-col gap-1.5 text-xs text-neutral-400">
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#B5F21D]"></i>
+                <span>홈 오피스 워크스테이션 스튜디오 (거주 지역 골목 상권 밀착)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="mail" class="w-3.5 h-3.5 text-[#B5F21D]"></i>
+                <span>contact@localnook.design · jangjihye523@gmail.com</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#B5F21D]"></i>
+                <span>인쇄소 감리 및 편집디자인 실무 4년 차 디자이너 1인 창직 모델</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-3 space-y-3">
+            <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#B5F21D]">사이트 바로가기</div>
+            <ul class="space-y-2 text-xs text-neutral-400">
+              <li><a href="#overview" class="hover:text-white transition-colors">01. 프로젝트 소개 & 가치 제안</a></li>
+              <li><a href="#painpoints" class="hover:text-white transition-colors">02. AI 인쇄 오류 진단 (Pain Point)</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">03. 4대 통합 브랜딩 솔루션</a></li>
+              <li><a href="#simulator" class="hover:text-white transition-colors">04. RGB vs CMYK 인쇄 시뮬레이터</a></li>
+              <li><a href="#packages" class="hover:text-white transition-colors">05. 수익 모델 A & B 맞춤 견적</a></li>
+              <li><a href="#cases" class="hover:text-white transition-colors">06. 지역 소상공인 3곳 검증 사례</a></li>
+              <li><a href="#settlement" class="hover:text-white transition-colors">07. 지역 상생 및 정주 로드맵</a></li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-4 bg-neutral-900 rounded-2xl p-6 border border-neutral-800 space-y-3 flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-bold text-white flex items-center gap-1.5 mb-1">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#B5F21D]"></i>
+                <span>우리 동네 점포 3곳 무료 시범 제작</span>
+              </div>
+              <p class="text-xs text-neutral-400 leading-relaxed">
+                현재 AI로 만든 홍보물이 깨지거나 새로운 시즌 메뉴판 인쇄가 필요하시다면 무료 실측 및 감리 혜택을 받아보세요.
+              </p>
+            </div>
+            <div class="space-y-2 pt-2">
+              <button onclick="openModal('무료 방문 상담 신청')" class="w-full py-2.5 px-4 rounded-xl bg-[#B5F21D] hover:bg-[#a2dc15] text-black text-xs font-extrabold transition-all cursor-pointer shadow-md">
+                무료 방문 상담 신청하기
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+          <div>© 2026 LocalNook Studio. 로컬 소상공인 AI-휴머니즘 옴니채널 마케터. All rights reserved.</div>
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors cursor-pointer">
+            <span>맨 위로 이동</span>
+            <i data-lucide="arrow-up" class="w-4 h-4 text-[#B5F21D]"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACTIVE LEAD CAPTURE & CONSULTATION MODAL -->
+    <div id="consultation-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+      <div class="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-neutral-200 overflow-hidden max-h-[92vh] flex flex-col">
+        <div class="px-6 py-5 bg-neutral-900 text-white flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full bg-[#B5F21D] flex items-center justify-center text-black font-black text-sm">✻</div>
+            <div>
+              <h3 class="text-base font-bold tracking-tight">무료 방문 컨설팅 & 파일 진단 신청</h3>
+              <p class="text-[11px] text-neutral-300">30대 4년 차 편집디자이너가 점포로 직접 찾아가거나 화상으로 상담합니다.</p>
+            </div>
+          </div>
+          <button onclick="closeModal()" class="p-1.5 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors cursor-pointer">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div class="p-6 overflow-y-auto flex-1">
+          <!-- Submission Confirmation Screen -->
+          <div id="modal-success" class="hidden py-8 text-center space-y-4">
+            <div class="w-16 h-16 rounded-full bg-[#B5F21D]/20 text-emerald-600 flex items-center justify-center mx-auto">
+              <i data-lucide="check-circle" class="w-10 h-10"></i>
+            </div>
+            <h4 class="text-2xl font-black text-neutral-900">신청이 성공적으로 접수되었습니다!</h4>
+            <p id="success-desc" class="text-sm text-neutral-600 max-w-md mx-auto leading-relaxed">
+              점주님, 소중한 문의 감사합니다.<br />
+              남겨주신 연락처로 24시간 이내에 4년 차 편집디자이너가 직접 연락드려 현장 방문 일정 및 무료 파일 진단을 도와드리겠습니다.
+            </p>
+            <div class="pt-4">
+              <button onclick="closeModal()" class="px-6 py-2.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold transition-all cursor-pointer">
+                확인 및 닫기
+              </button>
+            </div>
+          </div>
+
+          <!-- Application Form -->
+          <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <input type="hidden" id="form-service" value="무료 방문 컨설팅 신청" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">매장명 (상호) *</label>
+                <input type="text" id="store-name" required placeholder="예: 하루카페, 고향기름집" class="w-full px-3 py-2 text-xs rounded-xl border border-neutral-300 focus:outline-none focus:border-neutral-900" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">점포 업종</label>
+                <select id="store-category" class="w-full px-3 py-2 text-xs rounded-xl border border-neutral-300 focus:outline-none focus:border-neutral-900 bg-white">
+                  <option value="카페/디저트">카페 / 디저트 / 음료</option>
+                  <option value="독립 베이커리">독립 베이커리 / 제과</option>
+                  <option value="전통시장/방앗간">전통시장 / 방앗간 / 건어물</option>
+                  <option value="골목 식당/주점">골목 식당 / 주점 / 분식</option>
+                  <option value="수제 공방/소품">수제 공방 / 플라워 / 소품샵</option>
+                  <option value="기타 로컬 상점">기타 로컬 상점</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">대표자 성함</label>
+                <input type="text" id="owner-name" placeholder="예: 홍길동 대표" class="w-full px-3 py-2 text-xs rounded-xl border border-neutral-300 focus:outline-none focus:border-neutral-900" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">연락처 (휴대폰) *</label>
+                <input type="tel" id="owner-phone" required placeholder="010-0000-0000" class="w-full px-3 py-2 text-xs rounded-xl border border-neutral-300 focus:outline-none focus:border-neutral-900" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">매장 위치 (동네 / 지역)</label>
+              <input type="text" id="store-location" placeholder="예: 서울 마포구 연남동 골목길, 수원 행궁동 등" class="w-full px-3 py-2 text-xs rounded-xl border border-neutral-300 focus:outline-none focus:border-neutral-900" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1.5">현재 매장의 가장 큰 고민 (중복 선택)</label>
+              <div class="space-y-1.5 bg-neutral-50 p-3 rounded-2xl border border-neutral-200 text-xs text-neutral-700">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" checked class="rounded border-neutral-300 text-neutral-900" />
+                  <span>AI 생성물의 인쇄 깨짐/색감 왜곡 해결</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="rounded border-neutral-300 text-neutral-900" />
+                  <span>시그니처 메뉴판 & 쇼윈도 포스터 제작</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="rounded border-neutral-300 text-neutral-900" />
+                  <span>인쇄물과 일치하는 인스타/SNS 템플릿 필요</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="rounded border-neutral-300 text-neutral-900" />
+                  <span>새 시즌(계절) 정기 프로모션 킷 문의</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">추가 문의 내용 및 희망 일정</label>
+              <textarea id="store-message" rows="2" placeholder="인쇄하고 싶은 홍보물 종류나 상담 희망 요일/시간을 자유롭게 적어주세요." class="w-full p-2.5 text-xs rounded-xl border border-neutral-300 focus:outline-none focus:border-neutral-900"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-[#B5F21D] hover:bg-[#a2dc15] text-black font-extrabold text-sm transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>무료 시범 제작 및 방문 진단 신청 완료</span>
+              </button>
+              <p class="text-[11px] text-neutral-400 text-center mt-2">
+                * 제출하신 정보는 무료 방문 상담 및 인쇄물 진단 목적으로만 사용됩니다.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLIENT INTERACTIVE SCRIPT (Fully Self-Contained) -->
+    <script>
+      // Initialize Lucide Icons
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+
+      // Sticky Header on Scroll
+      window.addEventListener('scroll', function () {
+        const header = document.getElementById('main-header');
+        if (window.scrollY > 20) {
+          header.classList.add('bg-neutral-900/90', 'backdrop-blur-md', 'shadow-lg');
+          header.classList.remove('bg-transparent', 'py-5');
+          header.classList.add('py-3');
+        } else {
+          header.classList.remove('bg-neutral-900/90', 'backdrop-blur-md', 'shadow-lg');
+          header.classList.add('bg-transparent', 'py-5');
+          header.classList.remove('py-3');
+        }
+      });
+
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      }
+
+      // Modal Functions
+      function openModal(serviceTitle) {
+        const modal = document.getElementById('consultation-modal');
+        const formService = document.getElementById('form-service');
+        if (serviceTitle && formService) {
+          formService.value = serviceTitle;
+        }
+        document.getElementById('modal-success').classList.add('hidden');
+        document.getElementById('consultation-form').classList.remove('hidden');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        if (window.lucide) window.lucide.createIcons();
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('consultation-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        const storeName = document.getElementById('store-name').value;
+        const phone = document.getElementById('owner-phone').value;
+        if (!storeName || !phone) {
+          alert('매장명과 연락처를 입력해 주세요.');
+          return;
+        }
+        document.getElementById('consultation-form').classList.add('hidden');
+        const successBox = document.getElementById('modal-success');
+        successBox.classList.remove('hidden');
+        document.getElementById('success-desc').innerHTML = `
+          <strong>${storeName}</strong> 점주님, 소중한 문의 감사합니다.<br/>
+          남겨주신 연락처(<span class="font-mono">${phone}</span>)로 24시간 이내에 4년 차 편집디자이너가 직접 연락드려 현장 방문 일정 및 무료 파일 진단을 도와드리겠습니다.
+        `;
+        if (window.lucide) window.lucide.createIcons();
+      }
+
+      // Simulator Mode Switching
+      function setSimulatorMode(mode) {
+        const sheet = document.getElementById('sim-sheet');
+        const bleed = document.getElementById('bleed-lines');
+        const badge = document.getElementById('sim-badge');
+        const dpi = document.getElementById('sim-dpi');
+        const title = document.getElementById('sim-title');
+        const img = document.getElementById('sim-image');
+        const warning = document.getElementById('sim-warning');
+        const pantone = document.getElementById('sim-pantone');
+        const verdict = document.getElementById('sim-verdict');
+
+        const resVal = document.getElementById('res-val');
+        const colorVal = document.getElementById('color-val');
+        const bleedVal = document.getElementById('bleed-val');
+        const editVal = document.getElementById('edit-val');
+
+        const btnAi = document.getElementById('btn-mode-ai');
+        const btnDes = document.getElementById('btn-mode-designer');
+
+        if (mode === 'ai_raw') {
+          sheet.style.filter = 'saturate(0.7) contrast(0.85) blur(0.6px)';
+          sheet.style.backgroundColor = '#f3f4f6';
+          bleed.classList.add('hidden');
+          warning.classList.remove('hidden');
+          badge.className = 'text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-neutral-300 text-neutral-600';
+          dpi.innerText = 'RGB / 72 DPI';
+          title.className = 'text-2xl font-black tracking-tight leading-tight text-neutral-500 font-serif';
+          img.className = 'w-full h-full object-cover filter grayscale-[30%] brightness-90 contrast-85';
+          pantone.innerText = '색상 프로파일 없음';
+          verdict.innerText = '인쇄 부적합 (인쇄소 인쇄 거부 또는 불량 납품 위험)';
+          verdict.className = 'text-rose-400 font-semibold';
+
+          resVal.innerText = '72 DPI (인쇄 시 깨짐)';
+          resVal.className = 'text-rose-400 font-bold';
+          colorVal.innerText = 'RGB 화면용 (잉크 탁화)';
+          colorVal.className = 'text-rose-400 font-bold';
+          bleedVal.innerText = '없음 (글자 잘림 위험)';
+          bleedVal.className = 'text-rose-400 font-bold';
+          editVal.innerText = '수정 불가 (재생성 시 딴판)';
+          editVal.className = 'text-rose-400 font-bold';
+
+          btnAi.className = 'px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer bg-rose-500/20 text-rose-300 border border-rose-500/40 shadow-xs';
+          btnDes.className = 'px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer text-neutral-400 hover:text-white';
+        } else {
+          sheet.style.filter = 'none';
+          sheet.style.backgroundColor = '#faf8f5';
+          bleed.classList.remove('hidden');
+          warning.classList.add('hidden');
+          badge.className = 'text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-black text-[#B5F21D]';
+          dpi.innerText = 'CMYK / 300 DPI';
+          title.className = 'text-2xl font-black tracking-tight leading-tight text-neutral-900';
+          img.className = 'w-full h-full object-cover filter brightness-100 contrast-105';
+          pantone.innerText = '별색 Pantone 185C 지정';
+          verdict.innerText = '인쇄소 즉시 출력 가능 (감리 보증 완료)';
+          verdict.className = 'text-[#B5F21D] font-semibold';
+
+          resVal.innerText = '300 DPI 고해상도 벡터';
+          resVal.className = 'text-[#B5F21D] font-bold';
+          colorVal.innerText = 'CMYK + 별색(Pantone) 감리';
+          colorVal.className = 'text-[#B5F21D] font-bold';
+          bleedVal.innerText = '상하좌우 3mm 도련 완비';
+          bleedVal.className = 'text-[#B5F21D] font-bold';
+          editVal.innerText = '인디자인 레이어 100% 수정 가능';
+          editVal.className = 'text-[#B5F21D] font-bold';
+
+          btnDes.className = 'px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer bg-[#B5F21D] text-black font-extrabold shadow-md';
+          btnAi.className = 'px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer text-neutral-400 hover:text-white';
+        }
+      }
+
+      function setPaper(paperType) {
+        setSimulatorMode('designer');
+        const sheet = document.getElementById('sim-sheet');
+        if (paperType === 'arte') sheet.style.backgroundColor = '#faf8f5';
+        else if (paperType === 'rendezvous') sheet.style.backgroundColor = '#fcfcfb';
+        else if (paperType === 'kraft') sheet.style.backgroundColor = '#e2c7a2';
+        else if (paperType === 'matte') sheet.style.backgroundColor = '#ffffff';
+      }
+
+      // Estimator category and items logic
+      function selectCategory(cat, btn) {
+        document.querySelectorAll('.cat-btn').forEach(b => {
+          b.className = 'cat-btn py-2.5 px-3 rounded-xl text-xs font-bold text-center border transition-all cursor-pointer bg-white text-neutral-700 border-neutral-200 hover:border-neutral-300';
+        });
+        btn.className = 'cat-btn py-2.5 px-3 rounded-xl text-xs font-bold text-center border transition-all cursor-pointer bg-neutral-900 text-white border-neutral-900';
+      }
+
+      function updateEstimator() {
+        const checkboxes = document.querySelectorAll('.item-checkbox input[type="checkbox"]');
+        let count = 0;
+        checkboxes.forEach(cb => {
+          const parent = cb.closest('.item-checkbox');
+          if (cb.checked) {
+            count++;
+            parent.className = 'item-checkbox p-3.5 rounded-xl border flex items-center justify-between gap-3 cursor-pointer bg-white border-neutral-900 shadow-xs';
+          } else {
+            parent.className = 'item-checkbox p-3.5 rounded-xl border flex items-center justify-between gap-3 cursor-pointer bg-white/60 border-neutral-200 text-neutral-500';
+          }
+        });
+        document.getElementById('est-count').innerText = count + '개';
+        if (count <= 3) {
+          document.getElementById('est-days').innerText = '3~5영업일';
+          document.getElementById('est-plan').innerText = '수익 모델 B (시즌별 정기 구독 킷)';
+        } else {
+          document.getElementById('est-days').innerText = '7~10영업일 (인쇄소 감리 포함)';
+          document.getElementById('est-plan').innerText = '수익 모델 A (통합 런칭 프로젝트)';
+        }
+      }
+
+      // Pilot Case Switcher
+      const casesData = [
+        {
+          name: '고향기름집',
+          cat: '전통시장 30년 전통 방앗간',
+          loc: '지역 중앙전통시장 골목',
+          prob: '인터넷 무료 AI 프로그램으로 만든 라벨을 가정용 프린터로 뽑아 붙였으나 기름에 젖어 번지고, 손님들이 촌스럽다고 외면함.',
+          sol: '30년 가업의 진정성을 살린 서예풍 타이포그래피와 방수 내유성 특수 유포지 라벨 도입 + 추석 선물세트 스토리텔링 리플렛 제작.',
+          s1v: '+35%', s1l: '선물세트 매출',
+          s2v: '+48%', s2l: '2030 신규 유입',
+          s3v: '0%', s3l: '인쇄 불량률',
+          quote: '“모니터로 볼 땐 몰랐는데 기름병에 딱 붙는 내유성 용지와 고급스런 인쇄 마감을 보고 감탄했습니다. 동네에 이런 전문가가 계셔서 든든합니다.”',
+          owner: '박정식 대표 (62세)',
+          tags: ['#전통시장 혁신', '#내유성 방수 라벨', '#스토리 리플렛']
+        },
+        {
+          name: '연남 하루카페',
+          cat: '골목 스페셜티 로스터리',
+          loc: '골목 안쪽 단독주택 개조 카페',
+          prob: '직접 디자인한 모바일 포스터는 예뻤으나 대형 인쇄(A1) 시 해상도가 뭉개지고, 매장 안 메뉴판과 인스타 피드의 분위기가 달라 혼선 초래.',
+          sol: '시그니처 오트밀크 라떼와 말차케이크를 돋보이게 하는 웜톤 브라운 옴니채널 킷 제작 (아르떼 질감 메뉴판 + 인스타그램 스토리 규격 연동).',
+          s1v: '2.4배', s1l: '시그니처 판매량',
+          s2v: '+180건', s2l: 'SNS 태그 게시물',
+          s3v: '62%', s3l: '단골 재방문율',
+          quote: '“인쇄소에 넘길 때마다 재단선이며 CMYK 색상이 틀어져서 머리가 아팠는데, 감리부터 배송까지 완벽하게 처리해 주셔서 커피에만 집중할 수 있었습니다.”',
+          owner: '최유진 대표 (31세)',
+          tags: ['#스페셜티 카페', '#아르떼 특수 지질', '#인스타 피드 연동']
+        },
+        {
+          name: '그루터기 제빵소',
+          cat: '천연 발효종 독립 베이커리',
+          loc: '아파트 단지 앞 골목 상권',
+          prob: '화려한 AI 빵 일러스트를 사용했으나 실제 매장의 천연 발효종 건강빵 이미지와 이질감이 심해 손님들의 신뢰도 하락.',
+          sol: '사워도우의 담백한 질감을 살린 크라프트 친환경 패키지 스티커와 동네 주민을 위한 발효 스토리 소개 카드 + 빵 보관법 인쇄물 제작.',
+          s1v: '68%', s1l: '단골 재방문율',
+          s2v: '50구좌', s2l: '구독권 조기마감',
+          s3v: '100%', s3l: '친환경 포장 전환',
+          quote: '“우리 빵의 투박하지만 건강한 맛을 인쇄물의 종이 질감으로 고스란히 담아내 주셨어요. 손님들이 소개 카드를 읽고 빵을 더 좋아해 주십니다.”',
+          owner: '강민이 제빵사 (38세)',
+          tags: ['#친환경 크라프트', '#빵 보관법 카드', '#골목 단골 구축']
+        }
+      ];
+
+      function switchCase(idx) {
+        const c = casesData[idx - 1];
+        document.querySelectorAll('.case-btn').forEach((b, i) => {
+          if (i === idx - 1) {
+            b.className = 'case-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer bg-neutral-900 text-white shadow-md';
+          } else {
+            b.className = 'case-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200';
+          }
+        });
+
+        document.getElementById('case-name').innerText = c.name;
+        document.getElementById('case-cat').innerText = c.cat;
+        document.getElementById('case-location').innerText = c.loc;
+        document.getElementById('case-problem').innerText = c.prob;
+        document.getElementById('case-solution').innerText = c.sol;
+
+        document.getElementById('stat-1-val').innerText = c.s1v;
+        document.getElementById('stat-1-lbl').innerText = c.s1l;
+        document.getElementById('stat-2-val').innerText = c.s2v;
+        document.getElementById('stat-2-lbl').innerText = c.s2l;
+        document.getElementById('stat-3-val').innerText = c.s3v;
+        document.getElementById('stat-3-lbl').innerText = c.s3l;
+
+        document.getElementById('case-quote').innerText = c.quote;
+        document.getElementById('case-owner').innerText = c.owner;
+        document.getElementById('case-owner-store').innerText = c.name;
+
+        const tagContainer = document.getElementById('case-tags');
+        tagContainer.innerHTML = c.tags.map(t => `<span class="text-xs px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-600 font-medium">${t}</span>`).join('');
+      }
+    </script>
+  </body>
+</html>
